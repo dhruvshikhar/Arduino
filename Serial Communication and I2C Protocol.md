@@ -1,7 +1,7 @@
 # Serial Communication and I2C Protocols
 ## What is serial communication?
 To transfer data from one system to another there are mainly two ways, **serial communication** and **parallel communtication**. As the name suggests, in serial type, the data is sent in a series form whereas in the parallel type the data is sent in a parallel type. What this means is that in parallel type, we would require a lot of wires connected between the systems which although **very fast** but is often **not feasable**. The serial type on the other hand sends the data in a serial order which therefore requires one cable for data transfer and one or two other for earthing etc. Hence we can deduce that this method is quite **slow** as compared to the other way but **is feasible**.
-Serial Communication is a process of sending data 1 bit at a time sequentially over a communication channel. This the way the Arduino board communicates to the computer. Serial Communication is used when we send a commond from computer to Arduino board and vice-versa. Thus, uploading a code uses the same. The LEDs (present on Arduino) **RX** and **TX** flash when the arduino receives data and transmits data respectively.
+Serial Communication is a process of sending data 1 bit at a time sequentially over a communication channel. This the way the Arduino board communicates to the computer. Serial Communication is used when we send a commond from computer to Arduino board and vice-versa. Thus, uploading a code uses the same. The LEDs (present on Arduino) **RX** and **TX** flash when the arduino receives data and transmits data respectively.<br>
 A simple Arduino code:
 ~~~
 void setup() {
