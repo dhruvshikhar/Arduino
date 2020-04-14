@@ -10,5 +10,5 @@ I2C uses only two wires, **SDA** (*serial data*) and **SCA** (*serial clock*). S
 I2C generally uses 8-bit data transmission. The first 7-bits are the address bits which contains the address of the slave devices, followed by the 8th-bit which indicates *read* or *write*. This forms the **Control Byte**.
 ### I2C Protocols
 The protocol begins with a *start signal* by the master device which is followed by the *Control Unit*. After every 9th clock cycle we either have an *Acknowledge (Ack)* bit or *Not Acknowledge (Nack)* bit. Further running depends on this. If the bit is Ack, the next 8-bits contain the data sent by the Master device which is again followed by Ack or Nack. When Nack is encountered, it is considered as an end sign.
-###Conclusion
+### Conclusion
 I2C bus is used by many integrated circuits and is simple to implement. Any microcontroller can communicate with I2C devices even if it has no special I2C interface. I2C specifications are flexlible – I2C bus can communicate with slow devices and can also use high speed modes to transfer large amounts of data. Because of many advantages, I2C bus will remain as one of the most popular serial interfaces to connect integrated circuits on the board.
