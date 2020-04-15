@@ -17,9 +17,16 @@ delay(200);
 Output:<br>
 ![Serial Communication](https://cdn.instructables.com/FOO/XDSD/J7JMSYT1/FOOXDSDJ7JMSYT1.LARGE.jpg?auto=webp&frame=1&fit=bounds)<br>
 The above picture shows the Serial Output for the code.<br>
-##### Python Code:
-
-# I2C Protocols<br>
+### Serial Communication using Python
+Python can be used to interact with microcontrollers and other serial-port-enabled devices (including those using virtual ports). <br><br>
+![Circuit](https://maker.pro/storage/3ZalKvD/3ZalKvDI6JPuLpMCvWxz2oBSmXKVYf7QkYM8gOTB.jpeg)
+<br><br>We use PySerial for the purpose. **Installing PySerial:**<br>
+On your computer, open a terminal or command prompt and type in “PIP”. If you get an unrecognized error, then your PIP did not install correctly. When installing Python, make sure that the “Add to environmental variables” option is checked. Once PIP is working, run the command shown below to install PySerial:<br><br>
+~~~
+pip install PySerial
+~~~
+![Code](https://maker.pro/storage/GUHsXPu/GUHsXPuNUHsokHAOP5zJtPiLlj99w8WUhPWOuhu3.jpeg)<br><br>
+# I2C Protocols
 ### What is I2C Protocols?
 **I2C** _(pronounced I square C)_ or **Inter-Integrated Circuit** is a serial protocol for two-wire interface to connect low-speed devices like *microcontrollers, EEPROMs, A/D and D/A converters, I/O interfaces* and other similar peripherals in embedded systems. I2C bus is popular because it is simple to use, there can be more than one master, only upper bus speed is defined. The easy implementations comes with the fact that only two wires are required for communication between up to almost 128 (112) devices when using 7 bits addressing and up to almost 1024 (1008) devices when using 10 bits addressing. <br><br>
 ![I2C](http://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol_diagram.gif)<br><br>
