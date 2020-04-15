@@ -31,9 +31,23 @@ You need to configure a few parameters while using PySerial:<br>
 * Port – The name of the port being used (find this in device manager)
 * Parity bits – These are used for error correction but are not normally used
 * Stop bits – Only one stop bit is ever used unless there are timing issues
-* Time out – Used to prevent the serial port from hanging
+* Time out – Used to prevent the serial port from hanging<br><br>
+Now, follow the code:<br>
+~~~
+import serial
+
+serialPort = serial.Serial(port = "COM4", baudrate=115200,
+                           bytesize=8, timeout=2, stopbits=serial.STOPBITS_ONE)
+~~~
+Commonly used Functions for using the Serial Port:
+* open() – This will open the serial port
+* close() – This will close the serial port
+* readline() – This will read a string from the serial port
+* read(size) – This will read n number of bytes from the serial port
+* write(data) – This will write the data passed to the function to the serial port
+* in_waiting – This variable holds the number of bytes in the buffer<br><br>
 # I2C Protocols
-### What is I2C Protocols?
+### What are I2C Protocols?
 **I2C** _(pronounced I square C)_ or **Inter-Integrated Circuit** is a serial protocol for two-wire interface to connect low-speed devices like *microcontrollers, EEPROMs, A/D and D/A converters, I/O interfaces* and other similar peripherals in embedded systems. I2C bus is popular because it is simple to use, there can be more than one master, only upper bus speed is defined. The easy implementations comes with the fact that only two wires are required for communication between up to almost 128 (112) devices when using 7 bits addressing and up to almost 1024 (1008) devices when using 10 bits addressing. <br><br>
 ![I2C](http://quanser-update.azurewebsites.net/quarc/documentation/i2c_protocol_diagram.gif)<br><br>
 Each I2C slave device needs an address. Each slave device has a unique address. Transfer from and to master device is serial and it is split into 8-bit packets. All these simple requirements make it very simple to implement I2C interface even with cheap microcontrollers that have no special I2C hardware controller. You only need 2 free I/O pins and few simple i2C routines to send and receive commands.
